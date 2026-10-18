@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FiyatGor.Api/FiyatGor.Api.csproj" />
+    <Project Path="src/FiyatGor.Shared/FiyatGor.Shared.csproj" />
+  </Folder>
+</Solution>
