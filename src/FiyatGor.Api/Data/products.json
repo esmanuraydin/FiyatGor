@@ -1,0 +1,72 @@
+[
+  {
+    "barcode": "8690000000012",
+    "name": "Uzun Taneli Pirinç",
+    "brand": "Bereket",
+    "size": "1 kg",
+    "price": 64.9,
+    "unitPrice": 64.9,
+    "unitPriceUnit": "kg",
+    "campaignPrice": null,
+    "campaignText": null,
+    "vatRate": 1,
+    "sku": "BRK-PIR-001",
+    "stockQuantity": 24
+  },
+  {
+    "barcode": "8690000000029",
+    "name": "Tam Yağlı Süt",
+    "brand": "Günlük",
+    "size": "1 L",
+    "price": 34.5,
+    "unitPrice": 34.5,
+    "unitPriceUnit": "L",
+    "campaignPrice": 29.9,
+    "campaignText": "Kampanyalı fiyat",
+    "vatRate": 1,
+    "sku": "GNL-SUT-001",
+    "stockQuantity": 38
+  },
+  {
+    "barcode": "8690000000036",
+    "name": "Burgu Makarna",
+    "brand": "Sofra",
+    "size": "500 g",
+    "price": 22.5,
+    "unitPrice": 45,
+    "unitPriceUnit": "kg",
+    "campaignPrice": null,
+    "campaignText": null,
+    "vatRate": 1,
+    "sku": "SFR-MAK-500",
+    "stockQuantity": 52
+  },
+  {
+    "barcode": "8690000000043",
+    "name": "Siyah Zeytin",
+    "brand": "Ege Bahçesi",
+    "size": "400 g",
+    "price": 79.9,
+    "unitPrice": 199.75,
+    "unitPriceUnit": "kg",
+    "campaignPrice": 69.9,
+    "campaignText": "İndirimli fiyat",
+    "vatRate": 1,
+    "sku": "EGB-ZYT-400",
+    "stockQuantity": 16
+  },
+  {
+    "barcode": "8690000000050",
+    "name": "Bulaşık Deterjanı",
+    "brand": "Temiz",
+    "size": "750 ml",
+    "price": 58,
+    "unitPrice": 77.33,
+    "unitPriceUnit": "L",
+    "campaignPrice": null,
+    "campaignText": null,
+    "vatRate": 20,
+    "sku": "TMZ-BUL-750",
+    "stockQuantity": 21
+  }
+]
