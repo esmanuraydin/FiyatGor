@@ -1,6 +1,6 @@
 @FiyatGor.Api_HostAddress = http://localhost:5293
 
-GET {{FiyatGor.Api_HostAddress}}/weatherforecast/
+GET {{FiyatGor.Api_HostAddress}}/products/8690000000012
 Accept: application/json
 
 ###
