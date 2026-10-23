@@ -26,14 +26,14 @@
 - Gerekçe: API ve mobil uygulama veri kaynağından bağımsız gelişir. Mikro geldiğinde sadece yeni bir sınıf eklenir.
 - Sonuçları: Ekstra bir soyutlama katmanı oluşur. Sahte verinin gerçek veriyle aynı şekilde olmasına dikkat etmek gerekir.
 
-## ADR-002: <Esma yazacak: Projects + Claude Code iş bölümü>
-- Tarih:
-- Durum:
-- Bağlam:
-- Seçenekler:
-- Karar:
-- Gerekçe:
-- Sonuçları:
+## ADR-002: Projects ve Claude Code iş bölümü
+- Tarih: 2026-10-23
+- Durum: Kabul edildi
+- Bağlam: Başta Esma kodu kendisi yazıyor, Claude ipucu veriyordu. Esma, ürünü daha hızlı çıkarmak ve araç pratiği kazanmak için akışı değiştirmek istedi.
+- Seçenekler: A) Claude Code kodu yazar, Esma onaylar · B) Projects sohbetinde Claude yazar, Esma yapıştırır · C) Esma yazar, Claude ipucu verir
+- Karar: A. Claude Code terminalde yazar, Projects sohbeti açıklar ve soru sorar.
+- Gerekçe: Terminalde Claude Code ile çalışmak hedeflenen yetkinliğin parçası. Projects sohbeti Esma'nın dosyalarına erişemiyor. Her yazma izni Esma'nın onayından geçiyor.
+- Sonuçları: Hız artar. Anlamak için "geri anlat" adımı kalır. İzin istemleri okunmalı, commit'leri Esma atar. CLAUDE.md talimatları zorlayıcı değil.
 
 ## ADR-003: Hedef framework .NET 10
 - Tarih: 2026-10-19
