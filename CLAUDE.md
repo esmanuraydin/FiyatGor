@@ -21,10 +21,8 @@ El terminalinde barkod okutunca fiyat gösteren demo. Sahibi Esma. İki hedef e�
 
 ## Çalışma biçimi (ADR-002)
 - Claude Code kodu yazar, Esma her yazma iznini onaylar. Projects sohbeti açıklama ve soru içindir.
-- Bir dosya yazmadan önce ne yapacağını ve nedenini Türkçe kısaca anlat. Yazdıktan sonra dosyayı satır satır özetle.
 - Esma yazılanı kendi cümleleriyle geri anlatır. Yanlış ya da eksik anladığı yeri düzelt.
 - Küçük adımlarla ilerle: bir seferde bir dosya ya da bir değişiklik.
-- Önemli tasarım kararlarında en az iki seçenek ve bir öneri sun. Karar Esma'nın. Daha iyi bir yol görürsen açıkça söyle.
 - Kalıcı kararlar docs\karar-defteri.md içine ADR olarak, şablona uygun biçimde en alta eklenir. Eski kararlar silinmez, gerekirse "Yerini aldı" diye işaretlenir.
 
 ## Git
@@ -40,3 +38,10 @@ El terminalinde barkod okutunca fiyat gösteren demo. Sahibi Esma. İki hedef e�
 - docs\karar-defteri.md: kararlar (ADR)
 - docs\calisma-sozlesmesi.md: roller ve ritim. Roller tablosu ADR-002'den önce yazıldı, çelişkide ADR-002 geçerli
 - README.md: yol haritası ve hedef mimari
+
+## Çıktı kuralları
+- Sadece istenen işi yap. Ek dosya, ek öneri, alternatif ya da yan görev ekleme.
+- Cevabın en fazla 6 satır olsun: ne yaptığını söyle, değişen dosyaları listele.
+- Soru sorma. Yalnızca işi sürdüremeyecek kadar belirsizsen sor.
+- Commit mesajı önerme. Bir sonraki adımı önerme. Bunları Esma, Projects sohbetinden alır.
+- Açıklama ve tasarım kararı Projects sohbetinin işidir. Esma'ya "şunu sohbette sor" de.
