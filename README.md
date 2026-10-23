@@ -34,7 +34,7 @@ Planlanan solution projeleri:
 
 ## Teknolojiler
 
-- C# ve .NET 8+
+- C# ve .NET 10
 - ASP.NET Core Minimal API
 - Entity Framework Core
 - PostgreSQL (yerel geliştirme için Docker)

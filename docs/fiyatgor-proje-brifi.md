@@ -31,7 +31,7 @@ Taskora nasıl Jira'nın küçük bir demosuysa, FiyatGör de onun gibi.
 - Solution yapısı: `FiyatGor.Api`, `FiyatGor.Mobile`, `FiyatGor.Shared`
 
 ## Teknoloji
-C# / .NET 8+, ASP.NET Core Minimal API, EF Core, PostgreSQL (lokalde Docker), .NET MAUI (Android), Git + GitHub.
+C# / .NET 10, ASP.NET Core Minimal API, EF Core, PostgreSQL (lokalde Docker), .NET MAUI (Android), Git + GitHub.
 Geliştirme ortamı: Windows, VS Code, Antigravity IDE, Claude Code, Docker Desktop.
 
 ## Fazlar
