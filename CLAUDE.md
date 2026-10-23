@@ -3,8 +3,8 @@
 El terminalinde barkod okutunca fiyat gösteren demo. Sahibi Esma. İki hedef eşit: çalışan ürün ve Esma'nın AI araçlarını öğrenmesi. Bir adım işi hızlandırıp öğrenmeyi atlatıyorsa öğrenme kazanır.
 
 ## Mevcut durum
-- Faz 0 kapandı. Sıradaki: Faz 1, yani `GET /products/{barcode}`, FakeProductSource ve OpenAPI.
-- Program.cs hâlâ şablondaki /weatherforecast uç noktasını içeriyor. FakeProductSource henüz DI'a kayıtlı değil.
+- Faz 0 kapandı. Faz 1 devam ediyor: `GET /products/{barcode}`, FakeProductSource ve OpenAPI.
+- FakeProductSource, Program.cs içinde IProductSource olarak AddSingleton ile kayıtlı. `GET /products/{barcode}` ucu var: ürün bulunursa 200 ve ürünü, bulunamazsa 404 döner.
 - Test projesi yok.
 
 ## Teknoloji
