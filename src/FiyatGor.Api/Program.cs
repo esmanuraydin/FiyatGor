@@ -1,4 +1,6 @@
 using FiyatGor.Api;
+using FiyatGor.Shared;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,10 +19,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/products/{barcode}", async (string barcode, IProductSource productSource) =>
+app.MapGet("/products/{barcode}", async Task<Results<Ok<Product>, NotFound>> (string barcode, IProductSource productSource) =>
 {
     var product = await productSource.GetByBarcodeAsync(barcode);
-    return product is null ? Results.NotFound() : Results.Ok(product);
+    return product is null ? TypedResults.NotFound() : TypedResults.Ok(product);
 })
 .WithName("GetProductByBarcode");
 
