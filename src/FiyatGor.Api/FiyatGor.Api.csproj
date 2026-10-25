@@ -18,6 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FiyatGor.Shared\FiyatGor.Shared.csproj" />
+    <ProjectReference Include="..\FiyatGor.Application\FiyatGor.Application.csproj" />
+    <ProjectReference Include="..\FiyatGor.Infrastructure\FiyatGor.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
