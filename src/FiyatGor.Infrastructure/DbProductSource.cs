@@ -2,7 +2,7 @@ using FiyatGor.Application;
 using FiyatGor.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace FiyatGor.Api;
+namespace FiyatGor.Infrastructure;
 
 public class DbProductSource : IProductSource
 {

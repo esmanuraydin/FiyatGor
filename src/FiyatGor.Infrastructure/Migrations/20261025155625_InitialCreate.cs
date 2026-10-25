@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace FiyatGor.Api.Migrations
+namespace FiyatGor.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

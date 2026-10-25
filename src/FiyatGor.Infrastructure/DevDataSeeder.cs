@@ -2,17 +2,15 @@ using System.Text.Json;
 using FiyatGor.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace FiyatGor.Api;
+namespace FiyatGor.Infrastructure;
 
 public class DevDataSeeder
 {
     private readonly AppDbContext _db;
-    private readonly IWebHostEnvironment _env;
 
-    public DevDataSeeder(AppDbContext db, IWebHostEnvironment env)
+    public DevDataSeeder(AppDbContext db)
     {
         _db = db;
-        _env = env;
     }
 
     public async Task SeedAsync()
@@ -22,7 +20,7 @@ public class DevDataSeeder
             return;
         }
 
-        var path = Path.Combine(_env.ContentRootPath, "Data", "products.json");
+        var path = Path.Combine(AppContext.BaseDirectory, "Data", "products.json");
         var json = await File.ReadAllTextAsync(path);
         var products = JsonSerializer.Deserialize<List<Product>>(json, JsonSerializerOptions.Web) ?? [];
 

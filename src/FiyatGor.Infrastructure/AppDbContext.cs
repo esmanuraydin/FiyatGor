@@ -1,7 +1,7 @@
 using FiyatGor.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace FiyatGor.Api;
+namespace FiyatGor.Infrastructure;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

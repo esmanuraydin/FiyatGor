@@ -1,8 +1,7 @@
-using FiyatGor.Api;
 using FiyatGor.Application;
 using FiyatGor.Domain;
+using FiyatGor.Infrastructure;
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,9 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<IProductSource, DbProductSource>();
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
@@ -20,7 +18,7 @@ if (app.Environment.IsDevelopment())
 {
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    var seeder = new DevDataSeeder(db, app.Environment);
+    var seeder = new DevDataSeeder(db);
     await seeder.SeedAsync();
 }
 
@@ -33,9 +31,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/products/{barcode}", async Task<Results<Ok<Product>, NotFound>> (string barcode, IProductSource productSource) =>
+app.MapGet("/products/{barcode}", async Task<Results<Ok<Product>, NotFound>> (string barcode, GetProductByBarcode getProductByBarcode, CancellationToken ct) =>
 {
-    var product = await productSource.GetByBarcodeAsync(barcode);
+    var product = await getProductByBarcode.ExecuteAsync(barcode, ct);
     return product is null ? TypedResults.NotFound() : TypedResults.Ok(product);
 })
 .WithName("GetProductByBarcode");
