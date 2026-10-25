@@ -27,7 +27,7 @@
 - Sonuçları: Ekstra bir soyutlama katmanı oluşur. Sahte verinin gerçek veriyle aynı şekilde olmasına dikkat etmek gerekir.
 
 ## ADR-002: Projects ve Claude Code iş bölümü
-- Tarih: 2026-10-23
+- Tarih: 2026-10-24
 - Durum: Kabul edildi
 - Bağlam: Başta Esma kodu kendisi yazıyor, Claude ipucu veriyordu. Esma, ürünü daha hızlı çıkarmak ve araç pratiği kazanmak için akışı değiştirmek istedi.
 - Seçenekler: A) Claude Code kodu yazar, Esma onaylar · B) Projects sohbetinde Claude yazar, Esma yapıştırır · C) Esma yazar, Claude ipucu verir
