@@ -1,6 +1,6 @@
 using FiyatGor.Domain;
 
-namespace FiyatGor.Api;
+namespace FiyatGor.Application;
 
 public interface IProductSource
 {
