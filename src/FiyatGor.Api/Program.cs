@@ -1,5 +1,5 @@
 using FiyatGor.Api;
-using FiyatGor.Shared;
+using FiyatGor.Domain;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;

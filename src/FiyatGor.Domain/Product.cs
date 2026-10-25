@@ -1,4 +1,4 @@
-namespace FiyatGor.Shared;
+namespace FiyatGor.Domain;
 
 public record Product(
     string Barcode,
@@ -13,5 +13,3 @@ public record Product(
     int VatRate,
     string Sku,
     int StockQuantity);
-
-    

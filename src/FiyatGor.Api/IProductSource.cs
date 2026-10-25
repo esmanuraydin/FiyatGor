@@ -1,4 +1,4 @@
-using FiyatGor.Shared;
+using FiyatGor.Domain;
 
 namespace FiyatGor.Api;
 

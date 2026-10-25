@@ -1,5 +1,5 @@
 using System.Text.Json;
-using FiyatGor.Shared;
+using FiyatGor.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace FiyatGor.Api;
