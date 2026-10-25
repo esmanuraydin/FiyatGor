@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:18
+    container_name: fiyatgor-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: fiyatgor
+      POSTGRES_USER: fiyatgor
+      # Yalnızca geliştirme
+      POSTGRES_PASSWORD: fiyatgor_dev
+    volumes:
+      # postgres 18+ veriyi /var/lib/postgresql altında tutar
+      - fiyatgor-db-data:/var/lib/postgresql
+
+volumes:
+  fiyatgor-db-data:
