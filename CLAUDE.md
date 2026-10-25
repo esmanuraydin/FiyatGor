@@ -3,8 +3,10 @@
 El terminalinde barkod okutunca fiyat gösteren demo. Sahibi Esma. İki hedef eşit: çalışan ürün ve Esma'nın AI araçlarını öğrenmesi. Bir adım işi hızlandırıp öğrenmeyi atlatıyorsa öğrenme kazanır.
 
 ## Mevcut durum
-- Faz 0 kapandı. Faz 1 devam ediyor: `GET /products/{barcode}`, FakeProductSource ve OpenAPI.
-- FakeProductSource, Program.cs içinde IProductSource olarak AddSingleton ile kayıtlı. `GET /products/{barcode}` ucu var: ürün bulunursa 200 ve ürünü, bulunamazsa 404 döner.
+- Faz 0 ve Faz 1 tamamlandı. Sıradaki faz: Faz 2 (PostgreSQL + EF Core).
+- FakeProductSource, Program.cs içinde IProductSource olarak AddSingleton ile kayıtlı.
+- `GET /products/{barcode}` çalışıyor: ürün bulunursa 200 ve ürünü, bulunamazsa 404 döner. TypedResults kullanılıyor.
+- Geliştirme ortamında OpenAPI belgesi ve Scalar arayüzü (`/scalar`) açık.
 - Test projesi yok.
 
 ## Teknoloji
