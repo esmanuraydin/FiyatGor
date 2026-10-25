@@ -3,8 +3,10 @@
 El terminalinde barkod okutunca fiyat gösteren demo. Sahibi Esma. İki hedef eşit: çalışan ürün ve Esma'nın AI araçlarını öğrenmesi. Bir adım işi hızlandırıp öğrenmeyi atlatıyorsa öğrenme kazanır.
 
 ## Mevcut durum
-- Faz 0 ve Faz 1 tamamlandı. Sıradaki faz: Faz 2 (PostgreSQL + EF Core).
-- FakeProductSource, Program.cs içinde IProductSource olarak AddSingleton ile kayıtlı.
+- Faz 0, Faz 1 ve Faz 2 tamamlandı. Sıradaki faz: Faz 3 (MAUI Android uygulaması).
+- Veri Docker'daki PostgreSQL'den (docker-compose.yml, postgres:18) EF Core ile okunuyor: AppDbContext, InitialCreate migration, DbProductSource (Program.cs'te AddScoped ile IProductSource olarak kayıtlı).
+- Geliştirme ortamında DevDataSeeder, tablo boşsa products.json'dan 5 ürün ekliyor.
+- dotnet-ef yerel araç olarak repo kökündeki dotnet-tools.json içinde.
 - `GET /products/{barcode}` çalışıyor: ürün bulunursa 200 ve ürünü, bulunamazsa 404 döner. TypedResults kullanılıyor.
 - Geliştirme ortamında OpenAPI belgesi ve Scalar arayüzü (`/scalar`) açık.
 - Test projesi yok.
@@ -20,6 +22,8 @@ El terminalinde barkod okutunca fiyat gösteren demo. Sahibi Esma. İki hedef e�
 ## Komutlar
 - Derle: dotnet build
 - Çalıştır: dotnet run --project src\FiyatGor.Api
+- Veritabanını başlat: docker compose up -d
+- Migration'ları uygula: dotnet ef database update --project src\FiyatGor.Api
 
 ## Çalışma biçimi (ADR-002)
 - Claude Code kodu yazar, Esma her yazma iznini onaylar. Projects sohbeti açıklama ve soru içindir.
