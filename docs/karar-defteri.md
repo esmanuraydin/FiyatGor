@@ -43,3 +43,12 @@
 - Karar: B (.NET 10). Tüm projeler `net10.0` hedefler.
 - Gerekçe: İkisi de LTS sürümüdür; ancak .NET 8 desteğinin yakında bitme riski bulunurken bilgisayarda halihazırda .NET 10 SDK (10.0.401) kuruludur.
 - Sonuçları: Destek 2028-11'e kadar sürer (doğrulanmadı). İnternetteki örneklerin bir kısmı .NET 8 ile yazılmış olabilir. Brif ".NET 10" olarak güncellenmeli.
+
+## ADR-004: Katmanlı mimari (Clean Architecture)
+- Tarih: 2026-10-25
+- Durum: Kabul edildi
+- Bağlam: Proje küçük bir demo olarak başladı, ama hedef çalışan ve büyüyebilen bir ürün. Şu an tüm kod tek bir API projesinde; IProductSource zaten bir katman tohumu.
+- Seçenekler: A) Tek API projesiyle devam · B) Clean Architecture'a adım adım geçiş
+- Karar: B. Mimari Clean Architecture olacak: Domain, Application, Infrastructure, Api, ayrıca API sözleşmesi için DTO'lar. Adım adım kurulacak: önce katmanlar ve bağımlılık yönü, MediatR/CQRS gibi parçalar ikinci kullanım senaryosu gelince.
+- Gerekçe: Esma'nın hedefi gerçek, işleyen bir ürün ve zaman kısıtı yok. Öğrenme öncelikli. IProductSource zaten katman tohumu.
+- Sonuçları: Product ayrılacak (Domain'de iş nesnesi, sözleşmede DTO). Shared projesinin rolü yeniden belirlenecek. Her refactor adımı küçük commit olacak ve 200/404 kontrolü her adımda aynı kalacak. Testler, giriş/roller, log, doğrulama ve CI sırayla eklenecek.
